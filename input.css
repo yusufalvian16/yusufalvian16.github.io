@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-primary py-1.5 px-4 text-white font-semibold rounded-full shadow-lg hover:opacity-80 transition duration-500 sm:py-2 sm:px-5 md:py-2.5 md:px-6 md:text-lg lg:py-2.5 lg:px-7 lg:text-xl;
+  }
+}
+@layer components {
+  .humberger-line {
+    @apply block my-2 h-[2px] w-[30px] bg-texthrid;
+  }
+  .h1 {
+    @apply uppercase text-lg font-bold text-texPrimary lg:text-xl xl:text-2xl;
+  }
+  .h2 {
+    @apply text-texthrid font-semibold text-2xl lg:text-3xl xl:text-4xl;
+  }
+  .h3 {
+    @apply text-texthrid font-semibold text-xl lg:text-lg xl:text-xl;
+  }
+  .p {
+    @apply text-base text-texSacond xl:text-lg;
+  }
+}
+.navbar-fixed {
+  @apply fixed z-50 bg-white bg-transparent backdrop-blur-md shadow-md;
+}
+.humberger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.humberger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.humberger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
