@@ -4,28 +4,33 @@
 
 @layer utilities {
   .btn-primary {
-    @apply bg-primary py-1.5 px-4 text-white font-semibold rounded-full shadow-lg hover:opacity-80 transition duration-500 sm:py-2 sm:px-5 md:py-2.5 md:px-6 md:text-lg lg:py-2.5 lg:px-7 lg:text-xl;
+    @apply rounded-full bg-primary px-4 py-1.5 font-semibold text-white shadow-lg transition duration-500 hover:opacity-80 sm:px-5 sm:py-2 md:px-6 md:py-2.5 md:text-lg lg:px-7 lg:py-2.5 lg:text-xl;
   }
 }
 @layer components {
   .humberger-line {
-    @apply block my-2 h-[2px] w-[30px] bg-texthrid;
+    @apply my-2 block h-[2px] w-[30px] bg-texthrid dark:bg-white;
   }
   .h1 {
-    @apply uppercase text-lg font-bold text-texPrimary lg:text-xl xl:text-2xl;
+    @apply text-lg font-bold uppercase text-texPrimary dark:text-slate-400 lg:text-xl xl:text-2xl;
   }
   .h2 {
-    @apply text-texthrid font-semibold text-2xl lg:text-3xl xl:text-4xl;
+    @apply text-2xl font-semibold text-texthrid dark:text-white lg:text-3xl xl:text-4xl;
   }
   .h3 {
-    @apply text-texthrid font-semibold text-xl lg:text-lg xl:text-xl;
+    @apply text-xl font-semibold text-texthrid dark:text-white lg:text-lg xl:text-xl;
   }
   .p {
-    @apply text-base text-texSacond xl:text-lg;
+    @apply text-base text-texSacond dark:text-white xl:text-lg;
   }
 }
+
+#check:checked ~ label span div.toogle-circle {
+  @apply translate-x-[0.90rem];
+}
+
 .navbar-fixed {
-  @apply fixed z-50 bg-white bg-transparent backdrop-blur-md shadow-md;
+  @apply fixed z-50 bg-white bg-opacity-70 shadow-md backdrop-blur-md dark:bg-slate-700 dark:bg-opacity-50;
 }
 .humberger-active > span:nth-child(1) {
   @apply rotate-45;
